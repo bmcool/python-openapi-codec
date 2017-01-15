@@ -116,6 +116,7 @@ def _get_parameters(link, encoding):
                     'in': 'formData',
                     'description': field.description,
                     'type': field.type or 'string',
+                    'enum': field.enum,
                 }
                 if field.type == 'array':
                     parameter['items'] = {'type': 'string'}
